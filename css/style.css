@@ -19,7 +19,43 @@ body {
     color: #222;
     font: 13px/18px "Arial", Helvetica, sans-serif;
 }
-
+table {
+    padding: 0;
+    margin: 0;
+}
+th {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+td, th {
+    padding: 3px 10px;
+    overflow: hidden;
+    vertical-align: top;
+}
+th.date div,
+td.date div {
+    width: 130px;
+}
+th.log div,
+td.log div {
+    width: 500px;
+}
+form {
+    margin-top: 20px;
+}
+ul, ol {
+    margin-left: 20px;
+}
+textarea {
+    width: 650px;
+    height: 100px;
+    padding: 5px;
+}
+input[type=submit] {
+    width: 100%;
+    padding: 10px 0;
+    outline: 0;
+}
 /* -----------------------------------*/
 /* ---------->>> Structure <<<--------*/
 /* -----------------------------------*/
@@ -29,7 +65,6 @@ body {
 }
 #header {
     margin: 20px 0;
-    padding: 0 0 0 150px
 }
     #header h1 {
         font-family: "Arial", Helvetica, sans-serif;
@@ -37,110 +72,4 @@ body {
         line-height: 80px;
     }
 #cnt {
-    border: 1px solid #CCC;
-    padding: 20px 20px 0px 20px
-}
-#qs {
-    clear: both;
-    margin: 10px auto;
-    width: 600px;
-}
-    #qs label {
-        display: block;
-        float: none;
-        width: 100%;
-    }
-    #qs .qs_col {
-        float: left;
-        width: 200px
-    }
-    #qs .qs_block {
-        margin: 0 0 10px 0;
-    }
-#footer {
-    clear: both;
-    margin: 20px 0;
-    text-align: center;
-}
-    #footer div {
-        margin: 10px 0;
-    }
-/* -----------------------------------*/
-/* ---------->>> Forms <<<------------*/
-/* -----------------------------------*/
-form {}
-form fieldset {
-    border: 1px solid #ccc;
-    border-width: 0 0 1px 0;
-    padding: 0 0 10px 0;
-}
-form fieldset div {
-
-}
-form fieldset div label {
-    float: left;
-    font-weight: bold;
-    width: 200px;
-}
-form fieldset div select.selectOne {
-    margin: 0 0 0 10px;
-    width: 140px;
-}
-form fieldset div input.inputText {
-    margin: 0 0 0 10px;
-    width: 100px;
-}
-form fieldset label.labelCheckbox {
-    font-weight: normal;
-}
-form fieldset label.labelCheckbox input.inputCheckbox {
-    margin: 0 5px 5px 0;
-    vertical-align: middle;
-}
-form fieldset div button.inputButton,
-form fieldset div input.inputSubmit {
-    border: 1px solid #9A9A9A;
-    border-radius: 4px;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1), 0 1px 0 rgba(0, 0, 0, 0.09);
-    cursor: pointer;
-    float: left;
-    font: 0.9em/16px "Lucida Grande", "Lucida Sans Unicode", sans-serif;
-    margin: -5px 0 0 20px;
-    outline: 0;
-    padding: 5px;
-}
-form fieldset div button.inputButton:hover ,
-form fieldset div input.inputSubmit:hover {
-    background-color: #CCC;
-}
-form fieldset.submit {
-    border: none;
-}
-form fieldset.submit div button.inputButton,
-form fieldset.submit div input.inputSubmit {
-    margin: 5px 10px;
-}
-.loading {
-    float: left;
-    margin: 2px 0 0 20px;
-}
-
-/* -----------------------------------*/
-/* ---------->>> Class <<<-----------*/
-/* -----------------------------------*/
-.lfloat {
-    float: left;
-}
-.rfloat {
-    float: right;
-}
-.no_margin {
-    margin: 0;
-}
-.error {
-    color: red;
-    margin: 10px 0;
-}
-.greyout {
-    color: #888;
 }
