@@ -28,7 +28,12 @@
                 </form>
             </div>
         </div>
-        <script type="text/javascript"></script>
+        <script type="text/javascript">
+            $('html, body').animate({
+                scrollTop: $("textarea").offset().top
+                 }, 800);
+            $("textarea").focus()
+        </script>
     </body>
 </html>
 
