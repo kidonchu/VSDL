@@ -19,57 +19,52 @@ body {
     color: #222;
     font: 13px/18px "Arial", Helvetica, sans-serif;
 }
-table {
-    padding: 0;
-    margin: 0;
-}
-th {
-    font-size: 1.1em;
-    font-weight: bold;
-}
-td, th {
-    padding: 3px 10px;
-    overflow: hidden;
-    vertical-align: top;
-}
-th.date div,
-td.date div {
-    width: 130px;
-}
-th.log div,
-td.log div {
-    width: 500px;
-}
-form {
-    margin-top: 20px;
-}
-ul, ol {
-    margin-left: 20px;
-}
-textarea {
-    width: 650px;
-    height: 100px;
-    padding: 5px;
-}
-input[type=submit] {
-    width: 100%;
-    padding: 10px 0;
-    outline: 0;
-}
+
 /* -----------------------------------*/
 /* ---------->>> Structure <<<--------*/
 /* -----------------------------------*/
 #wrapper {
     margin: 0 auto;
-    width: 660px;
+    width: 900px;
 }
-#header {
+header {
     margin: 20px 0;
 }
-    #header h1 {
-        font-family: "Arial", Helvetica, sans-serif;
-        font-size: 40px;
-        line-height: 80px;
-    }
-#cnt {
+header h1 {
+    font-family: "Arial", Helvetica, sans-serif;
+    font-size: 40px;
+    line-height: 80px;
+}
+
+table.dataTable td.log {
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+form.log {
+    clear: both;
+    margin: 60px 0 20px 0;
+}
+
+form.log div {
+    margin: 0 0 10px 0;
+}
+
+form.log label {
+    font-weight: bold;
+}
+
+form.log textarea {
+    width: 890px;
+    height: 100px;
+    padding: 5px;
+}
+
+form.log input.is {
+    width: 100%;
+    padding: 10px 0;
+    outline: 0;
 }
