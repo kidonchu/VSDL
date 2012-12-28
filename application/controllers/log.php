@@ -13,18 +13,12 @@ class Log extends CI_Controller
 
     public function index ( $page = 'home' )
     {
-        if ( !file_exists( 'application/views/logging/' . $page . '.php' ) )
-        {
-            // Page does not exist
-            show_404();
-        }
-
         $data[ 'title' ] = "Log";
         $data[ 'logs' ] = $this->log_model->getLogs();
 
-        foreach( $this->log_model->getCats() as $row )
+        foreach ( $this->log_model->getCats() as $row )
         {
-            $cats[] = $row[ 'strCategory' ];
+            $cats[ ] = $row[ 'strCategory' ];
         }
 
         $data[ 'cats' ] = $cats;
