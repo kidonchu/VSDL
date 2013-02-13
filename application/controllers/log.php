@@ -16,24 +16,14 @@ class Log extends CI_Controller
 	function index ()
 	{
 		$this->_data['title'] = "All Logs";
-		$logs = $this->log_model->logs();
+		$logs = $this->log_model->find_all();
 
 		foreach ($logs as $i => $log)
 		{
-			$logs[$i]['Log'] = anchor('log/edit/' . $log['id'], $log['Log'], 'target=_blank');
+			$logs[$i]['Log'] = anchor('log/edit/' . $log['id'], $log['Log']);
 		}
 
 		$this->_data['logs'] = $logs;
-
-		foreach ( $this->log_model->cats() as $row )
-		{
-			if (isset($row['strCategory']))
-			{
-				$cats[] = $row['strCategory'];
-			}
-		}
-
-		// $data[ 'cats' ] = $cats;
 
 		$this->display("log/home");
 	}
@@ -58,40 +48,73 @@ class Log extends CI_Controller
 		redirect( "log" );
 	}
 
-	function show ()
-	{
-
-	}
-
 	function new_log ()
 	{
 		$this->_data['title'] = "New log";
+		$this->_data['cats'] = $this->log_model->cats();
 		$this->display("log/new");
 	}
 
 	function create ()
 	{
-		echo "creating";
-		// redirect("log");
+		$cat = $this->input->post('cat');
+		$new_cat = $this->input->post('new_cat');
+		$log = $this->input->post('log');
+
+		if ( ! empty($new_cat)) // add new category
+		{
+			$cat = $new_cat;
+		}
+
+		if ($this->log_model->create($cat, $log))
+		{
+			redirect("log");
+		}
+		else
+		{
+			redirect("log/new_log");
+		}
 	}
 
 	function edit ($id)
 	{
-		$this->_data['title'] = "Edit log";
-		$this->_data['log'] = $this->log_model->find_by_id($id);
-		$this->display("log/edit");
+		if ($log = $this->log_model->find_by_id($id))
+		{
+			$this->_data['title'] = "Edit log";
+			$this->_data['cats'] = $this->log_model->cats();
+			$this->_data['log'] = $log;
+			$this->display("log/edit");
+		}
+		else
+		{
+			redirect("log");
+		}
 	}
 
 	function update ($id)
 	{
-		echo "updating";
-		// redirect("log");
+		$cat = $this->input->post('cat');
+		$new_cat = $this->input->post('new_cat');
+		$log = $this->input->post('log');
+
+		if ( ! empty($new_cat)) // add new category
+		{
+			$cat = $new_cat;
+		}
+
+		$this->log_model->update($id, $cat, $log);
+
+		redirect("log");
 	}
 
 	function destroy ($id)
 	{
-		echo "deleting";
-		// redirect("log");
+		if ($this->log_model->destroy($id, $cat, $log))
+		{
+
+		}
+
+		redirect("log");
 	}
 
 	function display ($path)

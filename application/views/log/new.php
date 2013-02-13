@@ -1,5 +1,5 @@
 <div id="cnt">
-	<form method="post" action="log/create">
+	<?php echo form_open('log/create'); ?>
 		<div><label>Choose Category : </label>
 			<select name="cat">
 				<?php foreach ( $cats as $cat ): ?>
@@ -11,8 +11,9 @@
 		<div>
 		</div>
 		<div><textarea name="log"></textarea></div>
-		<div><input type="submit" class="is" value="Submit"/></div>
+		<div><input type="submit" class="is" value="Add"/></div>
 	</form>
+	<div><a class="bttn" href="<?php echo site_url('log'); ?>">Cancel</a></div>
 </div>
 
 <!-- End of file new.php -->

@@ -1,4 +1,5 @@
 <div id="cnt">
+    <div><a class="bttn" href="<?php echo site_url('log/new_log'); ?>">Add New</a></div>
     <table class="dataTable">
         <thead>
             <tr>
@@ -8,6 +9,7 @@
                 <th class="log">Log</th>
             </tr>
         </thead>
+        <tbody>
         <?php foreach ( $logs as $log ): ?>
             <tr>
                 <td class="date"><?php echo $log['Date']; ?></td>
@@ -16,19 +18,18 @@
                 <td class="log"><?php echo $log['Log']; ?></td>
             </tr>
         <?php endforeach; ?>
+        </tbody>
     </table>
 </div>
 <script type="text/javascript">
-    // var tableOption = {
-    //     "sPaginationType": "full_numbers",
-    //     "aaSorting": [[0, "asc"], [1, "asc"]],
-    //     "iDisplayLength": 10,
-    //     "iDisplayStart": ( <?php echo count( $logs ); ?> - 10 ) // Show 10 most recent records
-    //     //                "bPaginate": false,
-    //     //                "bInfo": false
-    //     //    "bFilter": false
-    // };
-    // $( ".dataTable" ).dataTable( tableOption );
+    var tableOption = {
+        "sPaginationType": "full_numbers",
+        "aaSorting": [[0, "asc"], [1, "asc"]],
+        "iDisplayLength": 10,
+        "iDisplayStart": ( Math.abs(<?php echo count($logs); ?> - 10) ) // Show 10 most recent records
+        // abs function is needed when # of logs are less than 10 (no negative number allowed)
+    };
+    $(".dataTable").dataTable(tableOption);
 </script>
 
 <!-- End of file home.php -->

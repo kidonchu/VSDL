@@ -1,13 +1,13 @@
 <div id="cnt">
     <?php echo form_open('log/update/' . $log['id']); ?>
         <div><label>Choose Category : </label>
-            <select name="cat" value="<?php echo $log['category']; ?>">
+            <select name="cat">
                 <?php foreach ( $cats as $cat ): ?>
-                    <option value="<?php echo $cat; ?>"><?php echo $cat; ?></option>
+                    <option value="<?php echo $cat; ?>" <?php echo $log['category'] == $cat ? 'SELECTED' : ''; ?>><?php echo $cat; ?></option>
                 <?php endforeach; ?>
             </select>
             or <label>Add new Category : </label>
-            <input type="text" name="newcat" class="it" /></div>
+            <input type="text" name="new_cat" class="it" /></div>
         <div>
         </div>
         <div>
@@ -18,6 +18,7 @@
     <?php echo form_open('log/destroy/' . $log['id']); ?>
         <div><input type="submit" class="is" value="Delete"/></div>
     </form>
+    <div><a class="bttn" href="<?php echo site_url('log'); ?>">Cancel</a></div>
 </div>
 
 <!-- End of file edit.php -->
