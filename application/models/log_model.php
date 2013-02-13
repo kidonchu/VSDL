@@ -9,38 +9,45 @@ class Log_model extends CI_Model
         $this->load->database();
     }
 
-    public function getLogs ()
+    public function logs ()
     {
-        $select = "DATE( timeTime ) AS Date,
-                   TIME( timeTime ) AS Time,
-                   strCategory AS Cat,
-                   strLog AS Log";
+        $select = "DATE( time ) AS Date,
+                   TIME( time ) AS Time,
+                   category AS Cat,
+                   log AS Log,
+                   id";
 
         $query = $this->db
                 ->select( $select )
-                ->order_by( 'nID asc' )
-                ->get( 'tblLog' );
+                ->order_by('id asc')
+                ->get('logs');
 
         return $query->result_array();
     }
 
-    public function getCats ()
+    public function cats ()
     {
         $query = $this->db
-                ->group_by( 'strCategory' )
-                ->get( 'tblLog' );
+                ->group_by('category')
+                ->get('logs');
 
         return $query->result_array();
     }
 
-    public function writeLog ( $cat, $log )
+    function find_by_id ($id)
+    {
+    	$query = $this->db->where('id', $id)->get('logs');
+    	return $query->row_array();
+    }
+
+    public function create ($cat, $log)
     {
         $data = array(
-            "strCategory" => $cat,
-            "strLog"      => $log
+            "category" => $cat,
+            "log"      => $log
         );
         
-        $this->db->insert( 'tblLog', $data );
+        $this->db->insert('logs', $data );
     }
 
 }

@@ -19,7 +19,10 @@ body {
     color: #222;
     font: 13px/18px "Arial", Helvetica, sans-serif;
 }
-
+textarea {
+    height: 300px;
+    width: 500px;
+}
 /* -----------------------------------*/
 /* ---------->>> Structure <<<--------*/
 /* -----------------------------------*/
