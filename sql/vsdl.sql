@@ -1,6 +1,6 @@
-CREATE TABLE tblLog (
-    nID         BIGINT      NOT NULL auto_increment,
-    timeTime    TIMESTAMP   NOT NULL,
-    strLog      TEXT        NOT NULL,
-    PRIMARY KEY (nID)
+CREATE TABLE logs (
+    id 		BIGINT      NOT NULL auto_increment,
+    time	TIMESTAMP   NOT NULL,
+    log 	TEXT        NOT NULL,
+    PRIMARY KEY (id)
 );
