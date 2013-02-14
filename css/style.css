@@ -4,8 +4,8 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0;padding:0;}
 table {border-spacing:0;}
 fieldset,img {border:0;}
-address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal;}
-ol,ul {list-style:none;}
+address,caption,cite,code,dfn,th,var {font-style:normal;font-weight:normal;}
+/*ol,ul {list-style:none;}*/
 caption,th {text-align:left;}
 h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;}
 abbr,acronym { border:0;}
@@ -31,7 +31,15 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
+ul, ol {
+    margin-left: 25px;
+}
+ul li, ol li {
+    line-height: 0em;
+}
+p {
+    margin: -5px 0;
+}
 /* -----------------------------------*/
 /* ---------->>> Structure <<<--------*/
 /* -----------------------------------*/
@@ -93,7 +101,6 @@ a.bttn {
     border-radius: 5px;
     cursor: pointer;
     display: block;
-    margin: 10px 0;
     padding: 5px 10px;
     text-align: center;
     text-decoration: none;

@@ -20,6 +20,11 @@
     </form>
     <div><a class="bttn" href="<?php echo site_url('log'); ?>">Cancel</a></div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        tinyMCE.init({theme : "simple", mode : "exact", elements: "log"});
+    });
+</script>
 
 <!-- End of file edit.php -->
 <!-- Location: ./application/views/log/edit.php -->
