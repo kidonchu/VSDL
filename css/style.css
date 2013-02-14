@@ -33,6 +33,7 @@ a:hover {
 }
 ul, ol {
     margin-left: 25px;
+    margin-top: -20px;
 }
 ul li, ol li {
     line-height: 0em;
