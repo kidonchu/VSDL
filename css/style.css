@@ -15,102 +15,35 @@ ol, ul, li {border: 0;}
 /* -----------------------------------*/
 /* ---------->>> GLOBAL <<<-----------*/
 /* -----------------------------------*/
-body {
-    color: #222;
-    font: 13px/18px "Arial", Helvetica, sans-serif;
-}
-textarea {
-    height: 300px;
-    margin: 10px 0;
-    padding: 10px;
-    width: 100%;
-}
-a {
-    color: #222;
-}
-a:hover {
-    text-decoration: underline;
-}
-ul, ol {
-    margin-left: 25px;
-    margin-top: -20px;
-}
-ul li, ol li {
-    line-height: 0em;
-}
-p {
-    margin: -5px 0;
-}
+body {color: #222; font: 13px/18px "Arial", Helvetica, sans-serif;}
+textarea {height: 300px; margin: 10px 0; padding: 10px; width: 100%;}
+a {color: #222;}
+a:hover {text-decoration: underline;}
+ul, ol {margin-left: 25px; margin-top: -20px;}
+ul li, ol li {line-height: 0em;}
+p {margin: -5px 0;}
 /* -----------------------------------*/
 /* ---------->>> Structure <<<--------*/
 /* -----------------------------------*/
-#wrapper {
-    margin: 0 auto;
-    width: 900px;
-}
-header {
-    margin: 20px 0;
-}
-header h1 {
-    font-size: 40px;
-    line-height: 80px;
-}
-
-form.log div {
-    margin: 0 0 10px 0;
-}
-
-form.log label {
-    font-weight: bold;
-}
-
-form.log textarea {
-    width: 890px;
-    height: 100px;
-    padding: 5px;
-}
-
+#wrapper {margin: 0 auto 20px; padding-bottom: 50px; width: 90%;}
+header {margin: 20px 0;}
+header h1 {font-size: 40px; line-height: 80px;}
+form.log div {margin: 0 0 10px 0;}
+form.log label {font-weight: bold;}
+form.log textarea {width: 890px; height: 100px; padding: 5px;}
 /* --------------------------------------*/
 /* --------->>> Form elements <<<--------*/
 /* --------------------------------------*/
-input.is {
-    margin: 5px 0;
-    width: 80px;
-}
-
+input.is {margin: 5px 0; width: 80px;}
 /* --------------------------------------*/
 /* -------->>> Table elements <<<--------*/
 /* --------------------------------------*/
-table.dataTable td.date {
-    width: 70px;
-}
-
-table.dataTable td.log {
-    white-space: pre-wrap; /* css-3 */
-    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-    white-space: -pre-wrap; /* Opera 4-6 */
-    white-space: -o-pre-wrap; /* Opera 7 */
-    word-wrap: break-word; /* Internet Explorer 5.5+ */
-}
-
+table.dataTable td.date {width: 70px;}
+table.dataTable td.log {white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap; /* Mozilla, since 1999 */ white-space: -pre-wrap; /* Opera 4-6 */ white-space: -o-pre-wrap; /* Opera 7 */ word-wrap: break-word; /* Internet Explorer 5.5+ */}
 /* --------------------------------------*/
 /* -------->>> Other elements <<<--------*/
 /* --------------------------------------*/
-a.bttn {
-    background-color: #EEE;
-    border: 1px solid #888;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    width: 80px;
-
-}
-a.bttn:hover {
-    background-color: #FAFFC7;   
-}
-.dataTables_wrapper {
-    margin-top: 20px;
-}
+a.bttn {background-color: #EEE; border: 1px solid #888; border-radius: 5px; cursor: pointer; display: block; padding: 5px 10px; text-align: center; text-decoration: none; width: 80px;}
+a.bttn:hover {background-color: #FAFFC7;}
+.dataTables_wrapper {margin-top: 20px;}
+div.cat {margin-bottom: 10px;}

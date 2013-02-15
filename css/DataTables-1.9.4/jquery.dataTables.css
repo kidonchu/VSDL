@@ -23,7 +23,7 @@ table.dataTable tfoot th {
 }
 
 table.dataTable td {
-    padding: 5px 10px;
+    padding: 10px 10px;
     white-space: nowrap; /* css-3 */
     white-space: -moz-nowrap; /* Mozilla, since 1999 */
     white-space: -nowrap; /* Opera 4-6 */
